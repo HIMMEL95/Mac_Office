@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:id="@+id/menu_search"
+
+
+    <item
+        android:id="@+id/itemSetting"
+        android:title="설정" >
+    </item>
+
+    <item
+        android:id="@+id/qna"
+        android:title="Q\u0026A" >
+    </item>
+
+    <item
+        android:id="@+id/action_search"
         android:title="Search"
-        app:showAsAction="always"
-        app:actionViewClass="androidx.appcompat.widget.SearchView" />
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="always" />
 
 </menu>
