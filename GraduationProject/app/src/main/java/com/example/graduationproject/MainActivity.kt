@@ -12,7 +12,7 @@ import android.widget.Toast
 
 import androidx.annotation.NonNull
 import android.content.Intent
-
+import android.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,10 +20,23 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    // action bar back intent
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        startActivity(Intent(this@MainActivity, SecondActivity::class.java))
-        return super.onOptionsItemSelected(item)
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return true
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        startActivity(Intent(this@MainActivity, SecondActivity::class.java)) // action bar back intent
+
+        val curId = item.itemId
+        when (curId) {
+            R.id.itemSetting -> Toast.makeText(this, "Refresh Clicked", Toast.LENGTH_SHORT).show()
+            R.id.qna -> Toast.makeText(this, "Search Clicked", Toast.LENGTH_SHORT).show()
+            R.id.action_search -> Toast.makeText(this, "Settings Clicked", Toast.LENGTH_SHORT)
+                .show()
+            else -> {
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
 }

@@ -121,58 +121,6 @@
 
                 </androidx.cardview.widget.CardView>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="평가"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:textSize="20sp" />
-
-                <RatingBar
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:numStars="5"
-                    android:rating="0.0"
-                    android:stepSize="0.5"
-                    tools:ignore="SpeakableTextPresentCheck"
-                    android:layout_gravity="center"
-                    android:isIndicator="false"/>
-
-                <!-- 해당 산에 관한 평가 내용 작성 영역 -->
-                <EditText
-                    android:id="@+id/Edit1"
-                    android:layout_width="match_parent"
-                    android:layout_height="280dp"
-                    android:hint="해당 산에 관련된 내용을 작성해주세요~~"
-                    android:gravity="top"/>
-
-                <!-- 이전 페이지로 이동 -->
-                <GridLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:columnCount="2"
-                    android:layout_gravity="fill_horizontal">
-
-                    <Button
-                        android:id="@+id/BtnBack"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="홈으로"
-                        android:layout_columnSpan="2"
-                        android:layout_gravity="fill"/>
-
-                    <Button
-                        android:id="@+id/BtnSave"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="저장하기"
-                        android:layout_columnSpan="2"
-                        android:layout_gravity="fill"/>
-
-                </GridLayout>
-
             </LinearLayout>
 
         </ScrollView>

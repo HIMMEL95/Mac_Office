@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">mountain</string>
+    <string name="tab_text_1">홈</string>
+    <string name="tab_text_2">수도권</string>
+    <string name="tab_text_3">강원도</string>
+    <string name="tab_text_4">충청도</string>
+    <string name="tab_text_5">전라도</string>
+    <string name="tab_text_6">경상도</string>
+</resources>
