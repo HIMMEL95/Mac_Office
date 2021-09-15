@@ -50,6 +50,7 @@
                     android:id="@+id/imageBtn"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
+                    android:layout_gravity="center"
                     android:src="@drawable/setting"
                     android:scaleType="fitCenter"
                     android:backgroundTint="@color/white"

@@ -51,6 +51,7 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:src="@drawable/setting"
+                    android:layout_gravity="center"
                     android:scaleType="fitCenter"
                     android:backgroundTint="@color/white"
                     android:contentDescription="@string/setting"/>
