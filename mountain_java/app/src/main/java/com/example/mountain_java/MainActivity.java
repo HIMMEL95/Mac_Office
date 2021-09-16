@@ -6,6 +6,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.view.Gravity;
 import android.view.View;
 
 import androidx.navigation.NavController;
@@ -61,21 +62,17 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_search) {
             return true;
         }
-
         Toast toast = Toast.makeText(getApplicationContext(),"", Toast.LENGTH_LONG);
-
         switch(item.getItemId())
         {
-            case R.id.action_settings:
+            case R.id.action_search:
                 toast.setText("Select Menu1");
                 break;
         }
-
         toast.show();
-
         return super.onOptionsItemSelected(item);
     }
 

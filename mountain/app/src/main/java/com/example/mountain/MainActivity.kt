@@ -17,12 +17,6 @@ import java.lang.*
 import androidx.annotation.NonNull
 import android.widget.Toast
 
-
-
-
-
-
-
 class MainActivity : AppCompatActivity() {
 
 private lateinit var binding: ActivityMainBinding
@@ -75,6 +69,5 @@ private lateinit var binding: ActivityMainBinding
         }
         return super.onOptionsItemSelected(item)
     }
-
 }
 
