@@ -3,7 +3,6 @@ package com.example.mountain
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
@@ -13,8 +12,16 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.tabs.TabLayout
 import android.view.View
-import android.widget.TextView
-import android.widget.Toolbar
+import android.widget.*
+import java.lang.*
+import androidx.annotation.NonNull
+import android.widget.Toast
+
+
+
+
+
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -40,28 +47,34 @@ private lateinit var binding: ActivityMainBinding
         }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_main , menu)
+        val menuItem = menu.findItem(R.id.action_search)
+        val searchView = menuItem.actionView as SearchView
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextChange(p0: String?): Boolean {
+                TODO("Not yet implemented")
+                return true
+            }
+
+            override fun onQueryTextSubmit(p0: String?): Boolean {
+                TODO("Not yet implemented")
+                return true
+            }
+        })
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.Setting-> {
-                Toast.makeText(this, "settings", Toast.LENGTH_SHORT).show()
-                return true
-            }
-            R.id.qna -> {
-                Toast.makeText(this, "QnA", Toast.LENGTH_SHORT).show()
-                return true
-            }
             R.id.action_search -> {
-                Toast.makeText(this, "산을 검색해주세요", Toast.LENGTH_SHORT).show()
+                val toast = Toast.makeText(this, "산을 검색해주세요", Toast.LENGTH_SHORT)
+                toast.show()
                 return true
-            }
-            else -> {
             }
         }
         return super.onOptionsItemSelected(item)
     }
+
 }
+
