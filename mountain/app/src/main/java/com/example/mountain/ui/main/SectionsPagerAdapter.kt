@@ -12,7 +12,7 @@ private val TAB_TITLES = arrayOf(
         R.string.tab_text_3,
         R.string.tab_text_4,
         R.string.tab_text_5,
-        R.string.tab_text_6
+        R.string.tab_text_5
 )
 
 /**
@@ -34,6 +34,6 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager)
 
     override fun getCount(): Int {
         // Show 6 total pages.
-        return 6
+        return 5
     }
 }

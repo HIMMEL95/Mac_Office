@@ -13,52 +13,6 @@
         android:orientation="vertical"
         android:padding="10dp">
 
-        <!-- 상단 이미지, 검색창, 설정창 영역 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:orientation="vertical">
-
-            <!-- 로고, 검색창, 설정창 영역 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:src="@mipmap/ic_launcher"
-                    android:scaleType="fitCenter"/>
-
-                <androidx.appcompat.widget.SearchView
-                    android:id="@+id/search_view"
-                    android:layout_width="280dp"
-                    android:layout_height="50dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginTop="5dp"
-                    app:iconifiedByDefault="true"
-                    app:queryHint="원하는 산을 입력하시오"
-                    android:backgroundTint="@color/black"/>
-
-                <ImageButton
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:backgroundTint="@color/white"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/setting"
-                    tools:ignore="SpeakableTextPresentCheck" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
         <!-- 하단 내용 영역 -->
         <ScrollView
             android:layout_width="match_parent"
