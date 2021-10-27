@@ -29,15 +29,32 @@
                 android:scaleType="fitCenter"
                 android:src="@drawable/mountain" />
 
-            <com.google.android.material.appbar.MaterialToolbar
+            <EditText
+                android:id="@+id/edit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:textSize="14sp"
+                android:hint="Enter The Text To Search" />
+
+            <Button
+                android:id="@+id/btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:text="Search"
+                android:textSize="12sp"
+                android:onClick="mOnClick" />
+
+            <!--<com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/topAppBar"
+                style="@style/Widget.MaterialComponents.Toolbar.Primary"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:title="@string/app_name"
+                android:gravity="center"
                 android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
                 app:menu="@menu/menu_main"
-                android:gravity="center"
-                style="@style/Widget.MaterialComponents.Toolbar.Primary"/>
+                app:title="@string/app_name" />-->
 
         </LinearLayout>
 
@@ -53,10 +70,18 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <ListView
-            android:id="@+id/lv"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+        </ScrollView>
 
     </androidx.viewpager.widget.ViewPager>
 

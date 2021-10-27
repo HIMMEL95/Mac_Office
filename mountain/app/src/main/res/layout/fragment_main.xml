@@ -38,28 +38,13 @@
                 android:contentDescription="mountain_Image" />
 
             <TextView
-                android:id="@+id/mountain_name"
+                android:id="@+id/sectionLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Mountain_name"
                 android:textStyle="bold"
                 android:textColor="@color/black" />
 
-            <TextView
-                android:id="@+id/mountain_location"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Mountain_location"
-                android:textStyle="bold"
-                android:textColor="@color/black" />
-
-            <TextView
-                android:id="@+id/section_label"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Mountain_info"
-                android:textStyle="bold"
-                android:textColor="@color/black" />
 
         </LinearLayout>
 
