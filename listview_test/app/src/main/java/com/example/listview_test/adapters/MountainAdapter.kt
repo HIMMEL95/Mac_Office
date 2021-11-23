@@ -5,8 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.TextView
 import com.example.listview_test.R
 import com.example.listview_test.data.Mountain
+import com.example.listview_test.data.MountainOpenApi
 
 // 2. 상속받은 뒤, Adapter 주 생성자에서 필요한 재료 받고
 class MountainAdapter(
@@ -32,6 +34,17 @@ class MountainAdapter(
 
         // tempRow는 맞지만 null은 절대 아니다 (= !!)
         val row = tempRow!!
+
+        // 실제 데이터가 있는 목록이 반영되도록 Adapter 클래스의 getView 함수를 수정
+        // 뿌려줄 row 안에 있는 텍스트 뷰 변수호 담기
+        val data = mList[position]
+        val name = row.findViewById<TextView>(R.id.mountainTxt)
+        val address = row.findViewById<TextView>(R.id.addressTxt)
+        val height = row.findViewById<TextView>(R.id.heightTxt)
+
+        name.text = data.mountainName
+        address.text = data.mountainAddress
+        height.text = data.mountainHeight.toString() + " m"
 
         return row
     }

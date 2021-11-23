@@ -7,9 +7,33 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    // 1. 액티비티 화면 (xml)에 리스트뷰 배치 + id 부여
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <EditText
+            android:id="@+id/edit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:textSize="12sp"
+            android:hint="Enter text to Search" />
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="Search"
+            android:textSize="12sp"
+            android:onClick="mOnClick"/>
+
+    </LinearLayout>
+
     <ListView
-        android:id="@+id/mountainListview"
+        android:id="@+id/mountainListView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

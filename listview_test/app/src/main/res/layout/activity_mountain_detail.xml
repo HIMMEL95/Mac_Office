@@ -31,7 +31,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/address"
+            android:id="@+id/mountainAddress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="강원 인제군 북면 한계리"

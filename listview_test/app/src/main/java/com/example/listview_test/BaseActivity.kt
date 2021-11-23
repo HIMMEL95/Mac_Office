@@ -1,6 +1,7 @@
 package com.example.listview_test
 
 import androidx.appcompat.app.AppCompatActivity
+import com.example.listview_test.data.Mountain
 
 abstract class BaseActivity : AppCompatActivity() {
 
