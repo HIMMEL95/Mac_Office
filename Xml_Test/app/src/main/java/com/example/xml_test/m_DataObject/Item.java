@@ -2,69 +2,82 @@ package com.example.xml_test.m_DataObject;
 
 public class Item {
 
-    String name;
-    String address;
-    String height;
-    String info;
-    String imgUrl;
-    String admin;
+    String mtnName, mtnAddress, mtnHeight, mtnAdmin, mtnInfo, mtnAdminNum, mtnListNo, mtnTop;
 
     public Item(){}
 
-    public Item(String name, String address, String height, String info, String imgUrl, String admin) {
-        this.name = name;
-        this.address = address;
-        this.height = height;
-        this.info = info;
-        this.imgUrl = imgUrl;
-        this.admin = admin;
+    public Item(String mtnName, String mtnAddress, String mtnHeight, String mtnAdmin, String mtnInfo, String mtnAdminNum, String mtnListNo, String mtnTop){
+        this.mtnName = mtnName;
+        this.mtnAddress = mtnAddress;
+        this.mtnHeight = mtnHeight;
+        this.mtnAdmin = mtnAdmin;
+        this.mtnInfo = mtnInfo;
+        this.mtnAdminNum = mtnAdminNum;
+        this.mtnListNo = mtnListNo;
+        this.mtnTop = mtnTop;
     }
 
-    public String getName() {
-        return name;
+    public String getMtnName() {
+        return mtnName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setMtnName(String mtnName) {
+        this.mtnName = mtnName;
     }
 
-    public String getAddress() {
-        return address;
+    public String getMtnAddress() {
+        return mtnAddress;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setMtnAddress(String mtnAddress) {
+        this.mtnAddress = mtnAddress;
     }
 
-    public String getHeight() {
-        return height;
+    public String getMtnHeight() {
+        return mtnHeight;
     }
 
-    public void setHeight(String height) {
-        this.height = height;
+    public void setMtnHeight(String mtnHeight) {
+        this.mtnHeight = mtnHeight;
     }
 
-    public String getInfo() {
-        return info;
+    public String getMtnAdmin() {
+        return mtnAdmin;
     }
 
-    public void setInfo(String info) {
-        this.info = info;
+    public void setMtnAdmin(String mtnAdmin) {
+        this.mtnAdmin = mtnAdmin;
     }
 
-    public String getImgUrl() {
-        return imgUrl;
+    public String getMtnInfo() {
+        return mtnInfo;
     }
 
-    public void setImgUrl(String imgUrl) {
-        this.imgUrl = imgUrl;
+    public void setMtnInfo(String mtnInfo) {
+        this.mtnInfo = mtnInfo;
     }
 
-    public String getAdmin() {
-        return admin;
+    public String getMtnAdminNum() {
+        return mtnAdminNum;
     }
 
-    public void setAdmin(String admin) {
-        this.admin = admin;
+    public void setMtnAdminNum(String mtnAdminNum) {
+        this.mtnAdminNum = mtnAdminNum;
+    }
+
+    public String getMtnListNo() {
+        return mtnListNo;
+    }
+
+    public void setMtnListNo(String mtnListNo) {
+        this.mtnListNo = mtnListNo;
+    }
+
+    public String getMtnTop() {
+        return mtnTop;
+    }
+
+    public void setMtnTop(String mtnTop) {
+        this.mtnTop = mtnTop;
     }
 }

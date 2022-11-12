@@ -49,17 +49,10 @@ public class MyAdapter extends RecyclerView.Adapter {
 
         Item item = items.get(position);
 
-        vh.mtnName.setText(item.getName());
-        vh.mtnAddress.setText(item.getAddress());
-        vh.mtnHeight.setText(item.getHeight() + " m");
+        vh.mtnName.setText(item.getMtnName());
+        vh.mtnAddress.setText(item.getMtnAddress());
+        vh.mtnHeight.setText(item.getMtnHeight() + " m");
 
-        if (item.getImgUrl()==null){
-            vh.iv.setVisibility(View.GONE);
-        } else {
-            vh.iv.setVisibility(View.VISIBLE);
-
-            Glide.with(context).load(item.getImgUrl()).into(vh.iv);
-        }
     }
 
     @Override
@@ -85,22 +78,37 @@ public class MyAdapter extends RecyclerView.Adapter {
                 @Override
                 public void onClick(View view) {
 
-                    String name = items.get(getLayoutPosition()).getName();
-                    String address = items.get(getLayoutPosition()).getAddress();
-                    String height = items.get(getLayoutPosition()).getHeight();
-                    String info = items.get(getLayoutPosition()).getInfo();
-                    String admin = items.get(getLayoutPosition()).getAdmin();
+                    String name = items.get(getLayoutPosition()).getMtnName();
+                    String address = items.get(getLayoutPosition()).getMtnAddress();
+                    String height = items.get(getLayoutPosition()).getMtnHeight();
+                    String info = items.get(getLayoutPosition()).getMtnInfo();
+                    String admin = items.get(getLayoutPosition()).getMtnAdmin();
+                    String adminNum = items.get(getLayoutPosition()).getMtnAdminNum();
+                    String listNo = items.get(getLayoutPosition()).getMtnListNo();
+                    String top = items.get(getLayoutPosition()).getMtnTop();
 
                     //웹튜를 가진 새로운 액티비티
-                    Intent intent= new Intent(context,ItemActivity.class);
+                    Intent intent= new Intent(context, ItemActivity.class);
                     intent.putExtra("name", name);
                     intent.putExtra("address", address);
                     intent.putExtra("height", height + " m");
                     intent.putExtra("info", info);
                     intent.putExtra("admin", admin);
+                    intent.putExtra("adminNum", adminNum);
+                    intent.putExtra("listNo", listNo);
+                    intent.putExtra("top", top);
+                    /*intent.putExtra("imgName", imgName);
+                    intent.putExtra("imgFileName", imgFileName);
+                    intent.putExtra("imgNo", imgNo);*/
                     context.startActivity(intent);
                 }
             });
         }
+    }
+
+    // add for search
+    public void filterList(ArrayList<Item> filterllist) {
+        items = filterllist;
+        notifyDataSetChanged();
     }
 }
